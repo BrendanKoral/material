@@ -3,6 +3,7 @@ import { MD_CARD_DIRECTIVES } from '@angular2-material/card';
 import { MD_BUTTON_DIRECTIVES } from '@angular2-material/button';
 import { MD_SIDENAV_DIRECTIVES } from '@angular2-material/sidenav';
 import { MdToolbar } from '@angular2-material/toolbar';
+import { MD_LIST_DIRECTIVES } from '@angular2-material/list';
 import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
 
 
@@ -16,10 +17,20 @@ import { MdIcon, MdIconRegistry } from '@angular2-material/icon';
     MD_BUTTON_DIRECTIVES,
     MD_SIDENAV_DIRECTIVES,
     MdToolbar,
-    MdIcon],
+    MdIcon,
+    MD_LIST_DIRECTIVES],
   providers: [MdIconRegistry]
 })
 
 export class AppComponent {
-  title = 'app works!';
+  views: Object[] = [
+    {
+      name: "My Account",
+      description: "Edit my account information"
+    },
+    {
+      name: "Basses I own",
+      description: "Let us know what basses you own!"
+    }
+  ];
 }
