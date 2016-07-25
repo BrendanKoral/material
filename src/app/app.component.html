@@ -1,6 +1,11 @@
+<md-sidenav-layout fullscreen>
+  <md-sidenav #sidenav>
+
+  </md-sidenav>
 <md-toolbar color="primary">
-  <button md-icon-button>
+  <button md-icon-button (click)="sidenav.open()">
     <md-icon>menu</md-icon>
   </button>
   Test App
 </md-toolbar>
+</md-sidenav-layout>
